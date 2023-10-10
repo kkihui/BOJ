@@ -53,7 +53,7 @@ def main():
     canuse = ['0','1','2','3','4','5','6','7','8','9']
     canuse = set(canuse)
     
-    if M > 0: # 쓸 수 있는 숫자의 tuple을 만듦
+    if M > 0: # 쓸 수 있는 숫자의 set을 만듦
         broken = list(map(str,sys.stdin.readline().split()))
         for _ in broken:
             canuse.remove(_)
