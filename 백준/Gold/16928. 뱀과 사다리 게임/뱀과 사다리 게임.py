@@ -10,7 +10,7 @@ class Graph:
     def bfs(self): # 비재귀적으로 bfs 구현
         self.deque.append((1,0))
         ans = 100
-        while not self.deque == deque(): # 덱이 빌 때까지 반복
+        while True: # 100 도착하면 break
             now,cnt = self.deque.popleft()
             teleport = self.board[now]
             if teleport != 0: # 사다리나 뱀은 무조건 타야함.
@@ -25,9 +25,8 @@ class Graph:
                         self.deque.append((new,cnt+1))
                         self.visit[new] = cnt+1
                         
-                        if new == 100: # 마지막에는 무조건 주사위로 100에 들어옴. 여러 경우 중 최소 구하기
-                            ans = min(ans,cnt+1)
-        return ans
+                        if new == 100: # 마지막에는 무조건 주사위로 100에 들어옴.
+                            return cnt+1
                 
 def main():
     g = Graph()
