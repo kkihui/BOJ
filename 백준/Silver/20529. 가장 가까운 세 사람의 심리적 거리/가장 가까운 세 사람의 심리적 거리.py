@@ -1,5 +1,4 @@
 import sys
-import queue
 
 def make_graph(list):
     for i in range(16):
