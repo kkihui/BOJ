@@ -7,17 +7,13 @@ def main():
     for _ in range(N):
         num = int(sys.stdin.readline())
         if num != 0:
-            if num < 0:
-                heapq.heappush(heap,(-num,num))
-            else:
-                heapq.heappush(heap,(num,num))
+            heapq.heappush(heap,(abs(num),num))
                                         
         else:
             if heap == []:
                 print(0)
             else:
-                print(heapq.heappop(heap)[1])
-    
+                print(heapq.heappop(heap)[1])    
     
 if __name__ == '__main__':
     main()
