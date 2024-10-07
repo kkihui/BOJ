@@ -1,3 +1,17 @@
+import itertools
+
+def solution(numbers, target):
+    answer = 0
+    for i in itertools.product([-1,1], repeat=len(numbers)):
+        num = 0
+        for j in range(len(numbers)):
+            num += i[j] * numbers[j]
+        if num == target:
+            answer += 1
+    return answer
+
+'''
+# 2번 재귀로 풀이 성공
 answer = 0
 def solution(numbers, target):
     def recursion(present,result,sign):
@@ -20,6 +34,7 @@ def solution(numbers, target):
     recursion(0,0,'-')
     
     return answer
+'''
 
 ''' 
 # 1번 풀이 시간 초과
