@@ -1,9 +1,3 @@
 def solution(nums):
-    ea = len(nums)//2
-    setnums = set(nums)
-    if len(setnums) >= ea:
-        answer = ea
-    else:
-        answer = len(setnums)
-    
-    return answer
+    kind = set(nums)
+    return min(len(kind),len(nums)//2)
