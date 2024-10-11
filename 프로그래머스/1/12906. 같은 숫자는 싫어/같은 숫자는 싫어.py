@@ -1,11 +1,9 @@
 def solution(arr):
-    stack = []
-    for n in arr:
-        if len(stack) != 0:
-            if stack[-1] != n:
-                stack.append(n)
+    answer = []
+    for num in arr:
+        if answer == []:
+            answer.append(num)
         else:
-            stack.append(n)
-    answer = stack
-    
+            if answer[-1] != num:
+                answer.append(num)
     return answer
