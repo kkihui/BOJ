@@ -1,18 +1,17 @@
 def solution(participant, completion):
-    comple = dict()
-    for name in completion:
-        if name in comple:
-            comple[name] += 1
-        else:
-            comple[name] = 1
+    parti_dict = {}
     
-    for name in participant:
-        if name not in comple:
-            answer = name
-            break
+    for human in participant:
+        if human in parti_dict:
+            parti_dict[human] += 1
         else:
-            comple[name] -= 1
-            if comple[name] == -1:
-                answer = name
-                break
+            parti_dict[human] = 1
+    
+    for done in completion:
+        parti_dict[done] -= 1
+        
+        if parti_dict[done] == 0:
+            del parti_dict[done]
+    
+    answer = list(parti_dict.keys())[0]
     return answer
