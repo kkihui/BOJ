@@ -1,7 +1,6 @@
 # 겹치는 숫자 중에 제일 큰 거 먼저 찾고, 거기서 부터 뒤 중에 제일 큰거 찾고 느낌으로 하기.
 
 import sys
-import itertools
 
 def main():
     n = int(sys.stdin.readline())
@@ -55,61 +54,3 @@ def main():
     
 if __name__ == "__main__":
     main()
-
-''' 앞에서 부터 긴 공통된 수열 찾으려고 하면 제일 큰 거 위치가 다르면 문제 발생
-import sys
-import itertools
-
-# 100 * 100 = 100000
-
-def main():
-    n = int(sys.stdin.readline())
-    an = list(map(int,sys.stdin.readline().split()))
-    m = int(sys.stdin.readline())
-    bn = list(map(int,sys.stdin.readline().split())) 
-    
-    a_idx, b_idx = 0,0
-    common = []
-    real_end = 0
-    
-    while not real_end:
-        end = 0
-        for i in range(a_idx,n):
-            end = 0
-            for j in range(b_idx,m):
-                if an[i] == bn[j]:
-                    common.append(an[i])
-                    a_idx = i+1
-                    b_idx = j+1
-                    end = 1
-                    break
-            if end:
-                break
-        if not end:
-            real_end = 1
-            break
-    
-    print(common)
-    idx = 0
-    ans = []
-    while idx != len(common):
-        maxi = max(common[idx:])
-        end = 1
-        for i in range(idx,len(common)):
-            if common[i] == maxi:
-                ans.append(common[i])
-                idx = i+1
-                end = 0
-                break
-        if end:
-            break
-    
-    if ans:
-        print(len(ans))
-        print(*ans)
-    else:
-        print(0)
-    
-if __name__ == "__main__":
-    main()
-'''
