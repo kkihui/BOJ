@@ -6,5 +6,5 @@
   ![mazandi profile](http://mazandi.herokuapp.com/api?handle=cogns1118&theme=cold)
 
   <h3>백준에서 푼 문제들을 올리는 곳</h3>
-  2024년에는 💚플레티넘💚이 될 수 있도록 정진하겠습니다~
+  2025년에는 💚플레티넘💚이 될 수 있도록 정진하겠습니다~
 </div>
