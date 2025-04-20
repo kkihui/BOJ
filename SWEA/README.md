@@ -1,4 +1,4 @@
-<h1 align="center"> SWEA </h1>
+<h1 align="center"> SW Expert Academy </h1>
 
 <div align="center">
   <h3>2025.04.17 SW Certificate Advanced 합격</h3>
