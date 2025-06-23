@@ -49,7 +49,6 @@ int main()
 		int asc = 0;
 		for (int j = 0; j < arr[i].value; j++)
 			asc = max(asc, dp[j].asc);
-
 		dp[arr[i].value].asc = asc+1;
 		
 		for (int j = 0; j <= arr[i].value; j++)
