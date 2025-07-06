@@ -1,6 +1,5 @@
 #include<iostream>
 #include<queue>
-#include<climits>
 
 using namespace std;
 
@@ -13,11 +12,11 @@ public:
 	int ways;
 	bool cur_way[3];
 
-	DP(int time = INT_MAX,int ways = 0)
+	DP(int time = kMaxSize + 1,int ways = 0)
 	{
 		this->time = time;
 		this->ways = ways; // 현재까지의 총 방법 수
-		this->cur_way[3] = {false,}; // 현재 숫자에 도달한 방법 수 (idx 0은 -1, 1은 +1, 2는 *2로 도달)
+		this->cur_way[3] = {0, }; // 현재 숫자에 도달한 방법 수 (idx 0은 -1, 1은 +1, 2는 *2로 도달)
 	}
 };
 
@@ -26,7 +25,7 @@ bool InRange(int num)
 	return (0 <= num && num < kMaxSize);
 }
 
-int n, k, fastest_time = INT_MAX;
+int n, k, fastest_time = kMaxSize + 1;
 DP dp[kMaxSize];
 
 int main()
